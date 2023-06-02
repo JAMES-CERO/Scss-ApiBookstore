@@ -1,0 +1,10 @@
+@function double($value) {
+    @return $value * 2;
+  }
+
+  
+  
+  .container {
+    width: double(300px);
+  }
+  

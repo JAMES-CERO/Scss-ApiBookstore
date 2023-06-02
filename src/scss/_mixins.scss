@@ -1,0 +1,34 @@
+// Mixin for Flex Center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin for Gradient Background
+@mixin gradient-background($start-color, $end-color) {
+  background-image: linear-gradient($start-color, $end-color);
+}
+
+// Mixin for Box Shadow
+@mixin box-shadow($x-offset, $y-offset, $blur, $color) {
+  box-shadow: $x-offset $y-offset $blur $color;
+}
+
+// Mixin for Media Query
+@mixin media-query($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Mixin for Transition
+@mixin transition($property, $duration, $timing-function: ease) {
+  transition: $property $duration $timing-function;
+}
+
+.button {
+  @include flex-center;
+  @include transition(all, 0.3s);
+  // Add more styles...
+}
